@@ -3,15 +3,16 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="176dp"
-    android:background="#673AB7"
+    android:background="#2f7992"
     android:gravity="bottom"
     android:padding="16dp"
     android:theme="@style/ThemeOverlay.AppCompat.Light">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher_round"/>
+        android:layout_width="80dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/superherologo" />
 
     <TextView
         android:layout_width="wrap_content"

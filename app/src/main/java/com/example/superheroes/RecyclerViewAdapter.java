@@ -16,8 +16,10 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.app.ActivityOptionsCompat;
+import androidx.core.content.ContextCompat;
 import androidx.core.view.ViewCompat;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -35,6 +37,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     LayoutInflater inflater;
     List<data> dataList;
     List<data> dataListAll;
+    CardView cardView;
     RecyclerViewInterface recyclerViewInterface;
 
     public RecyclerViewAdapter(Context context,List<data> dataList,RecyclerViewInterface recyclerViewInterface){
@@ -49,6 +52,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public ViewHolder onCreateViewHolder(@NonNull  ViewGroup parent, int viewType) {
         View view=inflater.inflate(R.layout.row,parent,false);
+
+
 
         return new ViewHolder(view);
     }
@@ -114,6 +119,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         TextView textView,textView8;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            cardView=itemView.findViewById(R.id.cardview);
            imageView=itemView.findViewById(R.id.imageView);
             textView=itemView.findViewById(R.id.textView);
             textView8=itemView.findViewById(R.id.textView8);
