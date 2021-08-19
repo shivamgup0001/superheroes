@@ -1,6 +1,7 @@
 package com.example.superheroes;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,6 +27,7 @@ public class MainActivity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         Intent intent = getIntent();
 
 
@@ -45,7 +47,6 @@ public class MainActivity2 extends AppCompatActivity {
             textView6.setText("Race:\t"+intent.getStringExtra("race"));
             textView7.setText("Intelligence:\t"+intent.getIntExtra("intelligence",0)+"\n"+"Strength:\t"+intent.getIntExtra("strength",0)+"\n"+"Speed:\t"+intent.getIntExtra("speed",0)+"\n"
             +"Durability:\t"+intent.getIntExtra("durability",0)+"\n"+"Power:\t"+intent.getIntExtra("power",0)+"\n"+"Combat:\t"+intent.getIntExtra("combat",0));
-            Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show();
 
     }
 }
